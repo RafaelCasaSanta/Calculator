@@ -18,87 +18,62 @@
 
 <body>
     <form name="calcform" method="post" action="">
+        <table id="calc">
+            <input type="text" name="screen" id="screen" placeholder="|" contenteditable />
 
-      
+            <tbody>
+                <!---OPERAÇÕES-->
+                <tr id="redLine">
 
-            
+                    <td> <input id="operadores" type="button" name="AC" class="num" value="AC" onclick="calcLimpar()">
+                    </td>
+                    <td> <input id="operadores" type="button" name="%" class="num" value="%"
+                            onclick="calcParse('*0.01')">
+                    </td>
+                    <td><input id="operadores" type="button" name="/" class="num" value="/"
+                            onclick="calcParse('dividir')">
+                    </td>
+                </tr>
+                <tr id="redLine">
+                    <td><input id="operadores" type="button" name="+" class="num" value="+"
+                            onclick="calcParse('somar')">
+                    </td>
+                    <td><input id="operadores" type="button" name="-" class="num" value="-"
+                            onclick="calcParse('subtrair')">
+                    </td>
+                    <td> <input id="operadores" type="button" name="*" class="num" value="*"
+                            onclick="calcParse('multiplicar')"></td>
+                </tr>
+
+                <!--BUTTONS DE NUMEROS-->
+                <tr id="textColor">
+                    <td> <input type="button" name="num7" class="num" value="7" size="20%" onclick="calcNum('7')"></td>
+                    <td> <input type="button" name="num8" class="num" value="8" onclick="calcNum('8')"></td>
+                    <td> <input type="button" name="num9" class="num" value="9" onclick="calcNum('9')"></td>
+                </tr>
+                <tr id="textColor">
+                    <td> <input type="button" name="num4" class="num" value="4" onclick="calcNum('4')"></td>
+                    <td> <input type="button" name="num3" class="num" value="5" onclick="calcNum('5')"></td>
+                    <td> <input type="button" name="num6" class="num" value="6" onclick="calcNum('6')"></td>
+                </tr>
+                <tr id="textColor">
+                    <td> <input type="button" name="num1" class="num" value="1" onclick="calcNum('1')"></td>
+                    <td> <input type="button" name="num2" class="num" value="2" onclick="calcNum('2')"></td>
+                    <td> <input type="button" name="num3" class="num" value="3" onclick="calcNum('3')"></td>
+                </tr>
+                <!--Resultados-->
+                <tr id="textColor">
+                    <td><input type="button" name="." class="num" value="." onclick="calcNum('.')"></td>
+                    <td><input type="button" name="0" class="num" value="0" onclick="calcNum('0')"></td>
+                    <td><input type="button" name="igual" value="=" onclick="calcParse('resultado')"></td>
+                </tr>
+            </tbody>
+        </table>
 
 
-            <table id="calc">
-                <input type="text" name="screen" id="screen" placeholder="|" />
-                <tbody>
-                    <!---OPERAÇÕES-->
-                    <tr id="redLine">
-
-                        <td> <input id="operadores" type="button" name="AC" class="num" value="AC"
-                                onclick="calcLimpar()"></td>
-                        <td> <input id="operadores" type="button" name="%" class="num" value="%"
-                                onclick="calcParse('*0.01')">
-                        </td>
-                        <td><input id="operadores" type="button" name="/" class="num" value="/"
-                                onclick="calcParse('dividir')">
-                        </td>
-                    </tr>
-                    <tr id="redLine">
-                        <td><input id="operadores" type="button" name="+" class="num" value="+"
-                                onclick="calcParse('somar')">
-                        </td>
-                        <td><input id="operadores" type="button" name="-" class="num" value="-"
-                                onclick="calcParse('subtrair')">
-                        </td>
-                        <td> <input id="operadores" type="button" name="*" class="num" value="*"
-                                onclick="calcParse('multiplicar')"></td>
-                    </tr>
-
-                    <!--BUTTONS DE NUMEROS-->
-                    <tr id="textColor">
-                        <td> <input type="button" name="num7" class="num" value="7" onclick="calcNum('7')"></td>
-                        <td> <input type="button" name="num8" class="num" value="8" onclick="calcNum('8')"></td>
-                        <td> <input type="button" name="num9" class="num" value="9" onclick="calcNum('9')"></td>
-                    </tr>
-                    <tr id="textColor">
-                        <td> <input type="button" name="num4" class="num" value="4" onclick="calcNum('4')"></td>
-                        <td> <input type="button" name="num3" class="num" value="5" onclick="calcNum('5')"></td>
-                        <td> <input type="button" name="num6" class="num" value="6" onclick="calcNum('6')"></td>
-                    </tr>
-                    <tr id="textColor">
-                        <td> <input type="button" name="num1" class="num" value="1" onclick="calcNum('1')"></td>
-                        <td> <input type="button" name="num2" class="num" value="2" onclick="calcNum('2')"></td>
-                        <td> <input type="button" name="num3" class="num" value="3" onclick="calcNum('3')"></td>
-                    </tr>
-                    <!--Resultados-->
-                    <tr id="textColor">
-                        <td><input type="button" name="." class="num" value="." onclick="calcNum('.')"></td>
-                        <td><input type="button" name="0" class="num" value="0" onclick="calcNum('0')"></td>
-                        <td><input type="button" name="igual" value="=" onclick="calcParse('resultado')"></td>
-                    </tr>
-                </tbody>
-            </table>
-
-        
 
 
     </form>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </body>
 
 </html>

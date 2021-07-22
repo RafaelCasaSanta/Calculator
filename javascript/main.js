@@ -8,9 +8,9 @@
 function calcNum(num) {
 
     if (typeof screenS == 'undefined') {
-        document.getElementById('screen').value = '';
+        document.calcform.screen.value = '';;
     }
-    document.getElementById('screen').value = document.getElementById('screen').value + num;
+    document.calcform.screen.value = document.calcform.screen.value + num;
     
 
     screenS = 1;
@@ -18,7 +18,7 @@ function calcNum(num) {
 
 // Função que limpa a calculadora e todas as variáveis existentes.
 function calcLimpar() {
-    document.getElementById('screen').value = '';
+    document.calcform.screen.value = '';
     delete val;
     delete operator;
     delete screenS;
@@ -45,12 +45,12 @@ function calcOper(oper, valor1, valor2) {
 
 // Função do algoritmo de "passagem" das ações do usuário
 function calcParse(oper) {
-    var valor = document.getElementById('screen').value;
+    var valor = document.calcform.screen.value;
     delete screenS;
 
     if (typeof operator != 'undefined' && oper == 'resultado') {
         val = calcOper(operator, val, valor);
-        document.getElementById('screen').value = val;
+        document.calcform.screen.value = val;
         delete oper;
         delete val;
         return (0);
@@ -59,13 +59,25 @@ function calcParse(oper) {
     if (typeof val != 'undefined') {
         val = calcOper(operator, val, valor);
         operator = oper;
-        document.getElementById('screen').value = val;
+        document.calcform.screen.value = val;
     } else {
         val = valor;
         operator = oper;
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
