@@ -1,0 +1,45 @@
+/* Estilo "emprestado" do site http://pt.wikipedia.org/wiki/XHTML */
+
+#visor {
+    background-color: #ad0383;
+}
+
+form{
+    margin: 0rem 27rem;
+    background-color:#9e4c9e ;
+    padding: 1rem 2rem;
+    width: 16rem;
+    height: 28rem;
+    border-radius: 1rem;
+}
+
+input#screen{
+    font-size: x-large;
+    padding: 0px 83px;
+    width: 5rem;
+    height: 3rem;
+    color: #ad0383;
+    background-color: white;
+}
+
+
+input#operadores.num{
+    font-size: x-large;
+    padding: 10px 24px;
+    width: 5rem;
+    height: 4rem;
+    color: #ad0383;
+    background-color: white;
+    border-radius: 1rem;
+}
+
+
+#textColor input{
+    font-size: x-large;
+    padding: 10px 24px;
+    width: 5rem;
+    height: 4rem;
+    color: white;
+    background-color: #ad0383;
+    border-radius: 1rem;
+}
