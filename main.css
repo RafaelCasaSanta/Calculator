@@ -1,13 +1,62 @@
 /* Estilo "emprestado" do site http://pt.wikipedia.org/wiki/XHTML */
+@keyframes rainbow{
+    0% {color: var(--color-red); left: 0rem; top: 0rem;}
+    10% {color:var(--color-orange); left: 21rem; top: 0rem;}
+    25% {color: var(--color-yellow); left: 21rem; top: 32rem;}
+    50% {color: var(--color-green); left: 0rem; top: 39rem;}
+    65% {color: var(--color-blue); left: -21rem; top: 32rem;}
+    80% {color: var(--color-indigo); left: -21rem; top: 0rem;}
+    100% {color: var(--color-super-purple); left: 0rem; top: 0rem;}
+
+}
+
+:root{
+    --color-black:#0000;
+    --color-white: #fff;
+    --color-light-grey: #a9afb8;
+
+
+    --color-super-purple: #ff00bf;
+    --color-medium-purple: #a8007e;
+    --color-dark-medium-purple:  #850063;
+    --color-dark-purple:#54013f;
+
+
+    --color-red: #ff0000;
+    --color-orange: #ff9500;
+    --color-yellow:  #fff200;
+    --color-green:   #7bff00;
+    --color-blue:   #0095ff;
+    --color-indigo:  #9900ff;
+
+
+    /* --font-Poppins: 'Poppins', sans-serif;
+    --font-Encode: 'Encode Sans SC', sans-serif;
+ */}
+
+
 
 
 header{
-    margin: 1rem 30rem;
+    position: relative;
+    margin-bottom: 2rem;
+    margin-left: 29rem;
+    
     font-size: 3rem;
+    font-family: 'Zen Tokyo Zoo', cursive;;
+    font-weight: 400;
+
     height: 2rem;
     width: 4rem;
-    color: rebeccapurple;
-}
+
+    color: var(--color-indigo);
+
+
+   animation-name: rainbow;
+   animation-duration: 8s;
+   animation-iteration-count: infinite;
+   animation-delay: 3s;
+  }
 
 
 
@@ -16,47 +65,64 @@ header{
     background-color: #ad0383;
 }
 
+
+
 form{
     margin: 0rem 27rem;
-    background-color:#9e4c9e ;
+    background-color:var(--color-medium-purple) ;
     padding: 1rem 2rem;
     width: 16rem;
     height: 28rem;
     border-radius: 1rem;
+    border-style:solid;
+   
+
+    
 }
 
+
 input#screen{
-    font-size: 20px;
-    padding: 0px 83px;
-    width: 5rem;
-    height: 3rem;
-    color: #ad0383;
-    background-color: white;
+    font-size: 2rem;
+    
+    width: 15rem;
+    height: 2rem;
+
+    color: var(--color-medium-purple);
+    background-color: var(--color-white);
+    font-family:'Encode Sans SC', sans-serif;;
+    font-weight: 100;
 }
 
 
 input#operadores.num{
     font-size: x-large;
-    padding: 10px 24px;
+    padding: 0rem 0rem;
     width: 5rem;
-    height: 4rem;
-    color: #ad0383;
-    background-color: white;
-    border-radius: 1rem;
+    height: 3rem;
+
+
+    color: var(--color-medium-purple);
+    background-color: var(--color-white);
+    border-radius: 0.5rem;
+    
+    font-family: 'Encode Sans SC', sans-serif;
+    font-weight: 400;
 }
 
 
 #textColor input{
-    font-size: x-large;
     padding: 10px 24px;
     width: 5rem;
     height: 4rem;
-    color: white;
-    background-color: #ad0383;
     border-radius: 1rem;
+    border-style: solid;
+
+    color: var(--color-white);
+    background-color: var(--color-dark-medium-purple);
+
+    font-size: xx-large;
+    font-family: 'Encode Sans SC', sans-serif;;
+    font-weight: 100;
 }
-
-
-
 
 
