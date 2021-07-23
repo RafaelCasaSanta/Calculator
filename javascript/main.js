@@ -4,27 +4,27 @@
 //Val = valor global
 //operator = oper global.
 
-// Função que adiciona os números no Visor quando pressionado os botões
+//* Função que adiciona os números no Visor quando pressionado os botões
 function calcNum(num) {
 
-    if (typeof screenS == 'undefined') {
-        document.calcform.screen.value = '';;
+    if (typeof screenS == 'undefined') { //screenS variavel global
+        document.calcform.screen.value = '';
     }
     document.calcform.screen.value = document.calcform.screen.value + num;
     
 
-    screenS = 1;
+    screenS = 1; 
 }
 
-// Função que limpa a calculadora e todas as variáveis existentes.
+//* Função que limpa a calculadora e todas as variáveis existentes.
 function calcLimpar() {
     document.calcform.screen.value = '';
     delete val;
     delete operator;
-    delete screenS;
+    delete screenS; 
 }
 
-// Função que executa as operações básicas da calculadora
+//* Função que executa as operações básicas da calculadora
 function calcOper(oper, valor1, valor2) {
     if (oper == "somar") {
         var valor = parseFloat(valor1) + parseFloat(valor2);
@@ -43,7 +43,7 @@ function calcOper(oper, valor1, valor2) {
     return (valor);
 }
 
-// Função do algoritmo de "passagem" das ações do usuário
+//* Função do algoritmo de "passagem" das ações do usuário
 function calcParse(oper) {
     var valor = document.calcform.screen.value;
     delete screenS;
@@ -55,7 +55,7 @@ function calcParse(oper) {
         delete val;
         return (0);
     }
-
+ 
     if (typeof val != 'undefined') {
         val = calcOper(operator, val, valor);
         operator = oper;
